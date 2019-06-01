@@ -1,0 +1,11 @@
+<div *ngIf="atividade">
+
+  <h2>{{atividade.desc | uppercase}} Details</h2>
+  <div><span>id: </span>{{atividade.id}}</div>
+  <div>
+    <label>Descrição:
+      <input [(ngModel)]="atividade.desc" placeholder="desc"/>
+    </label>
+  </div>
+
+</div>
