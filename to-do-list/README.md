@@ -1,4 +1,6 @@
-# ToDoList
+#Repositório para a primeira avaliação de Tópicos especiais em programação.
+
+## Lista de Tarefas
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
