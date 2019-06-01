@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Atividade } from '../atividade'
+import { Atividade } from '../atividade';
 import { ATIVIDADES } from '../mock-atividades';
+import { AtividadeService } from '../atividade.service';
 
 @Component({
   selector: 'app-atividades',
@@ -8,17 +9,17 @@ import { ATIVIDADES } from '../mock-atividades';
   styleUrls: ['./atividades.component.css']
 })
 export class AtividadesComponent implements OnInit {
-  atividades = ATIVIDADES;
-  
-  selectedAtividade: Atividade;
+  atividades: Atividade[];
 
-  constructor() { }
+  constructor(private atividadeService: AtividadeService) { }
 
   ngOnInit() {
+    this.getAtividades();
   }
 
-  onSelect(atividade: Atividade): void {
-    this.selectedAtividade = atividade;
+  getAtividades() {
+    this.atividadeService.getAtividades().subscribe(atividades => this.atividades = atividades);
   }
+
 
 }

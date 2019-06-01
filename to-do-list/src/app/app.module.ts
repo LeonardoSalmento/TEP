@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AtividadesComponent } from './atividades/atividades.component';
 import { AtividadeDetailComponent } from './atividade-detail/atividade-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AtividadesComponent,
-    AtividadeDetailComponent
+    AtividadeDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

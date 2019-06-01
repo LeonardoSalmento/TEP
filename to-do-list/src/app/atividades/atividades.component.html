@@ -6,15 +6,5 @@
     <span class="badge">{{atividade.id}}</span> {{atividade.desc}}
   </li>
 </ul>
- 
-<div *ngIf="selectedAtividade">
- 
-  <h2>{{selectedAtividade.desc | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedAtividade.id}}</div>
-  <div>
-    <label>desc:
-      <input [(ngModel)]="selectedAtividade.desc" placeholder="desc"/>
-    </label>
-  </div>
- 
-</div>
+
+<app-atividade-detail [atividade]="selectedAtividade"></app-atividade-detail>
