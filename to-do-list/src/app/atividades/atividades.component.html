@@ -1,10 +1,11 @@
-<h2>Minhas Atividades</h2>
+<h2>Minhas Atividade</h2>
 <ul class="atividades">
-  <li *ngFor="let atividade of atividades"
-    [class.selected]="atividade === selectedAtividade"
-    (click)="onSelect(atividade)">
-    <span class="badge">{{atividade.id}}</span> {{atividade.desc}}
+  <li *ngFor="let atividade of atividades" routerLink="/detail/{{atividade.id}}">
+    
+      <span class="badge">{{atividade.id}}</span> {{atividade.desc}}
   </li>
 </ul>
 
 <app-atividade-detail [atividade]="selectedAtividade"></app-atividade-detail>
+
+
